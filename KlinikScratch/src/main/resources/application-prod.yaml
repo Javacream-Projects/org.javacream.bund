@@ -1,0 +1,27 @@
+spring:
+ profiles:
+  include:
+   - K1
+   - K2
+
+---
+  spring:
+    profiles: K1
+  K1:
+    datasource:
+      url:   jdbc:h2:/tmp/klinik1
+      username: klinik1-user
+      password: klinik1-pwd
+      driver-class-name: org.h2.Driver
+---
+    
+  spring:
+    profiles: K2
+  K2:
+    datasource:
+      url:   jdbc:h2:/tmp/klinik2
+      username: klinik2-user
+      password: klinik2-pwd
+      driver-class-name: org.h2.Driver
+
+---
